@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="goToAbout">Go to About</button>
     <router-view></router-view>
   </div>
 </template>
@@ -8,7 +9,7 @@
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const goToHome = () => {
-  router.push('/home');
+const goToAbout = () => {
+  router.push('/about');
 };
 </script>
