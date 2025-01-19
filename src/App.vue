@@ -1,11 +1,8 @@
-<template>
-  <div>
-    <router-view></router-view>
-  </div>
-</template>
-
 <script setup>
-import { useRouter } from "vue-router";
-// 获取路由实例，以便在组件内使用
-const router = useRouter();
+import { useNoticeStore } from '@/stores/notice_pb'
+const store_notice = useNoticeStore()
 </script>
+
+<template>
+  <p>msg: {{ store_notice.notice }}</p>
+</template>
